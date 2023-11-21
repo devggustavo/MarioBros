@@ -1,0 +1,25 @@
+/* Estilização do elemento com id 'background' */
+#background {
+  position: fixed; /* Fixa a posição do elemento em relação à janela de visualização */
+  inset: 0; /* Define a distância do elemento em relação às bordas da janela de visualização */
+  z-index: -1; /* Define a ordem de empilhamento do elemento, colocando-o atrás de outros elementos */
+  width: 100%; /* Define a largura do elemento como 100% */
+  height: 100vh; /* Define a altura do elemento como 100% da altura da janela de visualização (viewport height) */
+}
+
+/* Estilização do vídeo dentro do elemento com id 'background' */
+#background video {
+  width: 100%; /* Define a largura do vídeo como 100% do elemento pai */
+  height: 100%; /* Define a altura do vídeo como 100% do elemento pai */
+  object-fit: cover; /* Controla o redimensionamento do vídeo para cobrir toda a área do elemento, preservando a proporção da imagem e cortando o excesso */
+}
+
+/* Pseudo-elemento ::after para adicionar um gradiente sobre o vídeo de fundo */
+#background::after {
+  content: ''; /* Adiciona um conteúdo vazio ao pseudo-elemento */
+  width: inherit; /* Herda a largura do elemento pai */
+  height: inherit; /* Herda a altura do elemento pai */
+  position: fixed; /* Fixa a posição do elemento em relação à janela de visualização */
+  inset: 0; /* Define a distância do elemento em relação às bordas da janela de visualização */
+  background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%); /* Define um fundo de gradiente linear com três cores para criar um efeito de sobreposição sobre o vídeo de fundo */
+}

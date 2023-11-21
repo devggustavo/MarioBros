@@ -1,0 +1,72 @@
+.cadastro-container {
+    background: #EDF1F7;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 60px;
+    width: 450px;
+}
+
+.cadastro-container h2 {
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    color: black;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    border: none;
+    color: black;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+}
+
+.form-group input[type="submit"] {
+    background-color: #00cc66;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.form-group input[type="submit"]:hover {
+    background-color: #00994d;
+}
+
+.cadastro {
+    width: 75px;
+    height: 60px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.text-sm {
+    text-align:end;
+}
+
+
+  /* Proporção para telas grandes (maiores que 768px de largura) */
+@media (min-width: 768px) {
+  .cadastro-container {
+    width: 50%; /* Está reduzindo a largura do container para 50% da largura da tela */
+    margin: 0 auto; /* Está Centralizando o container na tela */
+  }
+}
+
+/* Proporção para telas pequenas (até 767px de largura) */
+@media (max-width: 767px) {
+  .cadastro-container {
+    width: 50px; /*  Está reduzindo o tamanho do logo para 50px de largura */
+    height: 40px; /* Está reduzindo o tamanho do logo para 40px de altura */
+  }
+}

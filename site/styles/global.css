@@ -1,0 +1,89 @@
+/* Importa arquivos de estilo separados para o plano de fundo, cabeçalho e conteúdo principal */
+@import url('./backgroud.css');
+@import url('./header.css');
+@import url('./main.css');
+@import url('./Index.css');
+@import url('./login.css');
+@import url('./cadastro.css');
+
+/* Define estilos para todos os elementos na página */
+* {
+  padding: 0; /* Define o preenchimento como 0 para todos os elementos */
+  margin: 0; /* Define a margem como 0 para todos os elementos */
+  box-sizing: border-box; /* Define a caixa de modelagem como border-box para todos os elementos, incluindo o preenchimento e a borda nos cálculos de largura e altura */
+}
+
+/* Define as variáveis de cores personalizadas para uso posterior */
+:root {
+  --text: #EDF1F7; /* Define uma variável para a cor do texto */
+  --red: #C51212; /* Define uma variável para a cor vermelha */
+  --blue: #0041C2; /* Define uma variável para a cor azul */
+  --green: #14B02D; /* Define uma variável para a cor verde */
+  --yellow: #ffc12b; /* Define uma variável para a cor amarela */
+}
+
+/* Aplica estilos de fonte e cor para o corpo, botão e links */
+body, button, a {
+  color: var(--text); /* Aplica a cor de texto personalizada definida anteriormente */
+  font: 400 1rem "Mukta", sans-serif; /* Aplica a fonte personalizada com o peso da fonte e tamanho definidos */
+}
+
+/* Remove o sublinhado dos links */
+a {
+  text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+/* Define o comportamento do cursor para o botão durante o hover */
+button:hover {
+  cursor: pointer; /* Define o cursor como pointer durante o hover do botão */
+}
+
+/* Estilização para o contêiner principal com id 'app' */
+#app {
+  display: flex; /* Aplica um layout flexível ao contêiner principal */
+  flex-direction: column; /* Define a direção da flexão como coluna */
+  align-items: center; /* Centraliza os itens ao longo do eixo transversal */
+
+  width: 100%; /* Define a largura como 100% da largura do elemento pai */
+  height: 100vh; /* Define a altura como 100% da altura da janela de visualização (viewport height) */
+  overflow: hidden; /* Esconde o conteúdo que ultrapassa os limites do contêiner principal */
+}
+
+/* Estilos para o contêiner de login */
+.login-box {
+  position: absolute; /* Define a posição como absoluta em relação ao elemento pai */
+  top: 50%; /* Posiciona o elemento no topo em 50% da altura do elemento pai */
+  left: 50%; /* Posiciona o elemento à esquerda em 50% da largura do elemento pai */
+  transform: translate(-50%, -50%); /* Move o elemento para trás metade de sua própria largura e altura, para centralizá-lo precisamente */
+  background: #f9f9f9; /* Define a cor de fundo como um tom de branco */
+  padding: 30px; /* Define o preenchimento interno de 30 pixels em todas as direções */
+  border-radius: 5px; /* Define o raio da borda como 5 pixels, arredondando os cantos */
+}
+
+/* Estilos para tornar o contêiner de login responsivo em dispositivos com largura máxima de 768 pixels */
+@media (max-width: 768px) {
+  .login-box {
+    width: 90%; /* Define a largura como 90% para que o contêiner se ajuste melhor em dispositivos menores */
+  }
+}
+
+/* Estilos para o cabeçalho, ajustando o layout */
+header {
+  display: flex; /* Aplica um layout flexível ao cabeçalho e aos seus itens filhos */
+  justify-content: space-between; /* Distribui o espaço disponível igualmente entre os itens do cabeçalho */
+  align-items: center; /* Centraliza os itens verticalmente no cabeçalho */
+  padding: 20px; /* Define o preenchimento interno de 20 pixels em todas as direções dentro do cabeçalho */
+}
+
+/* Estilos para a lista de navegação, removendo os marcadores de lista e adicionando um espaçamento entre os itens */
+.navigation {
+  display: flex; /* Aplica um layout flexível à lista de navegação e a seus itens filhos */
+  list-style-type: none; /* Remove os marcadores de lista padrão */
+  gap: 20px; /* Define o espaçamento entre os itens da lista de navegação como 20 pixels */
+}
+
+/* Estilos para os links da lista de navegação, definindo a cor do texto */
+.navigation_link {
+  text-decoration: none; /* Remove a decoração de texto padrão para os links de navegação */
+  color: #000; /* Define a cor do texto como preto para os links de navegação */
+}

@@ -1,0 +1,83 @@
+/* Estilização para o elemento 'header' */
+header {
+  display: flex; /* Aplica um layout flexível ao cabeçalho */
+  align-items: center; /* Centraliza os itens verticalmente no eixo transversal */
+  column-gap: 64px; /* Define o espaçamento entre as colunas como 64 pixels */
+  width: 100%; /* Define a largura como 100% do elemento pai */
+  max-width: 1440px; /* Define a largura máxima do cabeçalho como 1440 pixels */
+  padding-top: 24px; /* Define o preenchimento superior como 24 pixels */
+  padding-bottom: 24px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+/* Estilização para a imagem dentro do cabeçalho */
+header img {
+  width: 70px; /* Define a largura da imagem como 70 pixels */
+  height: auto; /* Define a altura da imagem automaticamente com base na largura */
+}
+
+/* Estilização para a lista de navegação */
+.navigation {
+  display: flex; /* Aplica um layout flexível à lista de navegação */
+  align-items: center; /* Centraliza os itens verticalmente no eixo transversal */
+  column-gap: 48px; /* Define o espaçamento entre as colunas como 48 pixels */
+  list-style: none; /* Remove os marcadores de lista padrão */
+}
+
+/* Estilização para os links de navegação */
+.navigation_link {
+  font-size: 14px; /* Define o tamanho da fonte como 14 pixels */
+  font-weight: 300; /* Define o peso da fonte como 300 */
+  letter-spacing: 2px; /* Define o espaçamento entre letras como 2 pixels */
+  text-transform: uppercase; /* Converte o texto para maiúsculas */
+  position: relative; /* Define a posição como relativa para permitir o posicionamento de pseudo-elementos */
+}
+
+/* Estilização para o comportamento de hover nos links de navegação */
+.navigation_link:hover {
+  color: var(--red); /* Altera a cor do texto para a cor vermelha personalizada quando o mouse está sobre o link */
+}
+
+/* Pseudo-elemento para adicionar uma linha sob os links de navegação quando o mouse está sobre eles */
+.navigation_link::after {
+  content: ''; /* Adiciona um conteúdo vazio ao pseudo-elemento */
+  position: absolute; /* Define a posição como absoluta em relação ao elemento pai */
+  left: 0; /* Define a distância da esquerda como 0 */
+  bottom: -2px; /* Define a distância inferior como -2 pixels */
+  width: 60%; /* Define a largura como 60% do elemento pai */
+  height: 1px; /* Define a altura como 1 pixel */
+  background: var(--red); /* Define a cor de fundo como a cor vermelha personalizada */
+  transform: scaleX(0); /* Define a escala horizontal como 0 para esconder a linha inicialmente */
+  transform-origin: right; /* Define a origem da transformação como a direita */
+  transition: transform 0.4s; /* Adiciona uma transição suave de transformação com duração de 0.4 segundos */
+}
+
+/* Estilização para o comportamento de hover no pseudo-elemento após os links de navegação */
+.navigation_link:hover::after {
+  transform: scaleX(1); /* Mostra a linha sob o link aumentando a escala horizontal para 1 */
+  transform-origin: left; /* Define a origem da transformação como a esquerda */
+  transition: transform 0.4s; /* Adiciona uma transição suave de transformação com duração de 0.4 segundos */
+}
+
+/* Estilização para os elementos sociais de navegação */
+.navigation_social {
+  margin-left: auto; /* Define a margem à esquerda como automática para empurrar os itens para a direita */
+  display: flex; /* Aplica um layout flexível aos elementos sociais de navegação */
+  align-items: center; /* Centraliza os itens verticalmente no eixo transversal */
+  column-gap: 24px; /* Define o espaçamento entre as colunas como 24 pixels */
+}
+
+/* Estilização para os ícones sociais durante o hover */
+.navigation_social svg {
+  width: 20px; /* Define a largura dos ícones como 20 pixels */
+  height: 20px; /* Define a altura dos ícones como 20 pixels */
+  opacity: 0.6; /* Define a opacidade dos ícones como 0.6 */
+}
+
+/* Estilização para o comportamento de hover nos ícones sociais */
+.navigation_social svg:hover {
+  opacity: 1; /* Aumenta a opacidade dos ícones para 1 durante o hover */
+  transform: translateY(-5px); /* Move os ícones para cima em 5 pixels durante o hover */
+  cursor: pointer; /* Altera o cursor para um ponteiro durante o hover nos ícones sociais */
+}

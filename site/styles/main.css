@@ -1,0 +1,65 @@
+/* Estilização para a seção principal */
+main {
+  flex: 1; /* Permite que a seção principal cresça e ocupe todo o espaço disponível */
+  display: flex; /* Aplica um layout flexível à seção principal */
+  align-items: center; /* Centraliza os itens verticalmente no eixo transversal */
+  justify-content: space-between; /* Distribui o espaço disponível igualmente entre os elementos, deixando uma margem entre eles */
+  width: 100%; /* Define a largura como 100% do elemento pai */
+  max-width: 1440px; /* Define a largura máxima da seção principal como 1440 pixels */
+}
+
+/* Estilização para as informações principais na seção principal */
+.main_info {
+  width: 100%; /* Define a largura como 100% do elemento pai */
+  max-width: 570px; /* Define a largura máxima das informações principais como 570 pixels */
+}
+
+/* Estilização para o parágrafo dentro das informações principais */
+.main_info p {
+  font-size: 18px; /* Define o tamanho da fonte como 18 pixels */
+  margin: 20px 0 28px; /* Define as margens superior, inferior como 20 pixels e 28 pixels, respectivamente, e a margem direita/esquerda como 0 */
+}
+
+/* Estilização para a divisão de elementos dentro das informações principais */
+.main_info div {
+  display: flex; /* Aplica um layout flexível para os elementos dentro das informações principais */
+  column-gap: 32px; /* Define o espaçamento entre as colunas como 32 pixels */
+}
+
+/* Estilização para os links e botões dentro da divisão de elementos nas informações principais */
+.main_info div a, .main_info div button {
+  width: 100%; /* Define a largura como 100% do elemento pai */
+  padding: 10px 0; /* Define o preenchimento superior e inferior como 10 pixels e o preenchimento direito/esquerdo como 0 */
+  border-radius: 3px; /* Define o raio da borda como 3 pixels */
+  font-size: 16px; /* Define o tamanho da fonte como 16 pixels */
+  font-weight: 600; /* Define o peso da fonte como 600 */
+  text-align: center; /* Centraliza o texto horizontalmente */
+  text-transform: uppercase; /* Converte o texto para maiúsculas */
+  letter-spacing: 0.3px; /* Define o espaçamento entre letras como 0.3 pixels */
+  transform: skew(-10deg); /* Aplica uma inclinação ao texto para criar um efeito visual inclinado */
+}
+
+/* Estilização para os links dentro da divisão de elementos nas informações principais */
+.main_info div a {
+  background: var(--red); /* Define o fundo como a cor vermelha personalizada */
+}
+
+/* Estilização para os botões dentro da divisão de elementos nas informações principais */
+.main_info div button {
+  background: transparent; /* Define o fundo como transparente */
+  border: 1px solid var(--green); /* Define a borda como uma linha sólida com cor verde personalizada */
+}
+
+/* Estilização para os links de botões personalizados */
+.custom-button-link {
+  background-color: #14B02D; /* Define a cor de fundo como verde personalizado */
+  color: #fff; /* Define a cor do texto como branco */
+  padding: 10px 20px; /* Define o preenchimento superior e inferior como 10 pixels e o preenchimento direito/esquerdo como 20 pixels */
+  border-radius: 5px; /* Define o raio da borda como 5 pixels */
+  text-decoration: none; /* Remove a decoração de texto padrão */
+}
+
+/* Estilização para o comportamento de hover nos links de botões personalizados */
+.custom-button-link:hover {
+  background-color: #14B02D; /* Mantém a cor de fundo como verde personalizado durante o hover */
+}

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../lojavirtual/iconeNav/favicon.ico">
+
+    <title>Loja do Super Mario</title> <!-- Define o título da página -->
+
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+</head>
+
+<body>
+    <header>
+        <div class="nav container"> <!-- CLASSE QUE DEFINE AS CONFIGURAÇÕES DO TOPO DA PÁGINA -->
+            <img src="ImagensM/logo-cap.png" alt="Logo chapéu Mario" style="width: 60px; height: auto;">
+            <ul class="navbar">
+                <li><a href="#" class="nav-link active">HOME</a></li>
+                <li><a href="#lancamentos" class="nav-link">LANÇAMENTOS</a></li>
+                <li><a href="#produtos" class="nav-link">PRODUTOS</a></li>
+                <li><a href="#contatos" class="nav-link">CONTATOS</a></li>
+
+            </ul>
+            <div class="btn-actions"> <!-- LOGIN ILUSTRATIVO -->
+                <i class="bx bx-search" onclick="toggleSearch()"></i>
+                <i class="bx bx-cart" onclick="toggleCart()"></i>
+                <img src="ImagensM/pngegg.png" onclick="toggleMenu()" class="pngegg-ImagensM">
+            </div>
+            <div class="search-menu-wrap" id="searchMenu"> <!-- BARRA DE PESQUISA -->
+                <div class="searchMenu">
+                    <input type="text" placeholder="Pesquisar...">
+                    <i class="bx bx-search search"></i>
+                </div>
+            </div>
+            <div class="menu-cart-wrap" id="cartMenu"> <!--CARRINHO-->
+                <div class="menu-cart">
+                    <div class="cart-title">
+                        <i class="bx bx-x close-btn" onclick="closeBtn()"></i>
+                        <h3>Seu carrinho (2 itens)</h3>
+                    </div>
+                    <hr>
+                    <div class="cart-box">
+                        <img src="ImagensM/fantasia da princesa peach.jpg" class="cart-img">
+                        <div class="cart-info">
+                            <p class="cart-name">Fantasia da princesa peach</p>
+                            <p class="cart-value">R$ 150,00</p>
+                            <p class="cart-color"><span class="bold">cor:</span>Rosa</p>
+                            <p class="cart-size"><span class="bold">Tamanho:</span>14</p>
+                            <p class="cart-quantity"><span class="bold">Quantidade:</span>1</p>
+                        </div>
+                        <i class="bx bx-trash-alt"></i>
+                    </div>
+                    <div class="cart-box">
+                        <img src="ImagensM/caneca-luigi-super-mario-porcelana-caneca-gamer.jpg" class="cart-img">
+                        <div class="cart-info">
+                            <p class="cart-name">Caneca de porcelana do Luigi</p>
+                            <p class="cart-value">R$ 50,00</p>
+                            <p class="cart-color"><span class="bold">cor:</span>Branca</p>
+                            <p class="cart-size"><span class="bold">Tamanho:</span>350ml</p>
+                            <p class="cart-quantity"><span class="bold">Quantidade:</span>1</p>
+                        </div>
+                        <i class="bx bx-trash-alt"></i>
+                    </div>
+                    <hr>
+                    <div class="cart-finish">
+                        <p>Subtotal: <span class="bold">R$ 200,00</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="sub-menu-wrap" id="subMenu"> <!--PERFIL-->
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <img src="ImagensM/pngegg.png">
+                        <h3>Mario</h3>
+                    </div>
+                    <hr>
+                    <a href="#" class="sub-menu-link">
+                        <i class="bx bxs-user"></i>
+                        <p>Minha conta</p>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <i class="bx bxs-cog"></i>
+                        <p>Configurações</p>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <i class="bx bxs-help-circle"></i>
+                        <p>Suporte & Ajuda</p>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <i class="bx bxs-exit"></i>
+                        <p>Sair</p>
+                        <span>></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="home container" id="home"> <!-- CLASSE QUE DEFINE AS PROPAGANDAS IMAGENS QUE PASSAM-->
+        <div class="home-content">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="ImagensM/Blackfriday.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="ImagensM/Black Friday peach.png.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="ImagensM/produtosmario.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="Produtos Container">
+        <div class="heading"> Brinquedos Super Mario</div>
+        <img src="ImagensM/brinquedosmario.jpg">
+        <div class="novidades-text">
+            <p>Nova coleção</p>
+            <h2>Kits<br> Fantasias</h2>
+            <p class="desc">Bem-vindo à nossa incrível loja virtual dedicada ao universo mágico do Super Mario!
+                Aqui, mergulhamos no fascinante mundo dos cogumelos,
+                encanadores destemidos e aventuras emocionantes para trazer até você uma experiência única de compras.
+                Estamos empolgados em apresentar nossa mais recente adição: a deslumbrante Nova Coleção Super Mario!</p>
+            <a href="#" class="btn-primary"> Saiba mais </a>
+        </div>
+    </section>
+
+    <section class="lancamentos container">
+        <section id="lancamentos" class="lancamentos container"></section>
+        <div class="heading" style="text-align: left;">LANÇAMENTOS</div>
+        <div class="lancamentos-content">
+            <div class="lancamentos-box">
+                <div class="item">
+                    <img src="ImagensM/Peach.jpg" alt="A princesa Peach">
+                    <div class="lancamentos-text">
+                        <h2>A princesa Peach</h2>
+                        <p>Boneca Peach.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="lancamentos-box">
+                <div class="item">
+                    <img src="ImagensM/Mario_1.jpg" alt="Boneco Mario">
+                    <div class="lancamentos-text">
+                        <h2>Boneco Mario</h2>
+                        <p>O protagonista</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lancamentos-box">
+                <div class="item">
+                    <img src="ImagensM/Luigi_1.jpg" alt="Boneco Luigi">
+                    <div class="lancamentos-text">
+                        <h2>Boneco Luigi</h2>
+                        <p>Irmão do Mario.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="novidades" id="novidades">
+        <section id="produtos" class="produtos container"></section>
+        <div class="heading">PRODUTOS</div>
+        <div class="sub-title">Exclusivos</div>
+        <div class="pro-container">
+            <div class="pro">
+                <img src="ImagensM/caneca-luigi-super-mario-porcelana-caneca-gamer.jpg" alt="">
+                <div class="des">
+                    <span>NINTENDO</span>
+                    <h5>CANECA DE PORCELANA LUIGI</h5>
+                    <div class="star">
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star-half"></i>
+                    </div>
+                   <h4>R$ 50,00</h4>
+                </div>
+                <a href="descricao.html"><i class="bx bxs-cart cart"></i></a>
+            </div>
+    
+            <div class="pro">
+                <img src="ImagensM/caneca-super-mario-princesa-peach-porcelana-caneca-princesa-mario.jpg" alt="">
+                <div class="des">
+                    <span>NINTENDO</span>
+                    <h5>CANECA DE PORCELANA PEACH</h5>
+                    <div class="star">
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star-half"></i>
+                    </div>
+                    <h4>R$ 30,00</h4>
+                </div>
+                <a href="#"><i class="bx bxs-cart cart"></i></a>
+            </div>
+    
+            <div class="pro">
+                <img src="ImagensM/caneca-toad-cogumelo-super-mario-porcelana-super-mario-world.jpg" alt="">
+                <div class="des">
+                    <span>NINTENDO</span>
+                    <h5>CANECA DE PORCELANA COGUMELO</h5>
+                    <div class="star">
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star-half"></i>
+                    </div>
+                    <h4>R$ 30,00</h4>
+                </div>
+                <a href="#"><i class="bx bxs-cart cart"></i></a>
+            </div>
+
+            <div class="pro">
+                <img src="ImagensM/fantasia da princesa peach.jpg" alt="">
+                <div class="des">
+                    <span>NINTENDO</span>
+                    <h5>FANTASIA DA PEACH</h5>
+                    <div class="star">
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star-half"></i>
+                    </div>
+                    <h4>R$ 150,00</h4>
+                </div>
+                <a href="#"><i class="bx bxs-cart cart"></i></a>
+            </div>
+
+            <div class="pro">
+                <img src="ImagensM/camiseta.jpg" alt="">
+                <div class="des">
+                    <span>NINTENDO</span>
+                    <h5>CAMISETA</h5>
+                    <div class="star">
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star-half"></i>
+                    </div>
+                    <h4>R$ 50,00</h4>
+                </div>
+                <a href="#"><i class="bx bxs-cart cart"></i></a>
+            </div>
+
+            <div class="pro">
+                <img src="ImagensM/camisa2.png" alt="">
+                <div class="des">
+                    <span>NINTENDO</span>
+                    <h5>CAMISETA</h5>
+                    <div class="star">
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star-half"></i>
+                    </div>
+                    <h4>R$ 50,00</h4>
+                </div>
+                <a href="#"><i class="bx bxs-cart cart"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="container">
+        <section id="contatos" class="contatos container"></section>
+        <div class="col">
+            <h4>Contatos</h4>
+            <p><strong> Endereço:</strong> Centro, Porto Velho RO</p>
+            <p><strong>Telefone:</strong> (69) 9999-6666</p>
+            <p><strong> Horário:</strong> Segunda à sábado - 9h às 18h</p>
+            <div class="follow">
+                <h4>Redes sociais</h4>
+                <div class="icon">
+                    <i class="bx bxl-facebook"></i>
+                    <i class="bx bxl-twitter"></i>
+                    <i class="bx bxl-instagram"></i>
+                    <i class="bx bxl-youtube"></i>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            autoplay:{
+                delay: 4500,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assetsM/favicon.ico">
+
+    <title>Loja do Super Mario</title> <!-- Define o título da página -->
+
+    <link rel="stylesheet" href="descricao.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+</head>
+
+<body>
+    <header>
+        <div class="nav container"> <!-- CLASSE QUE DEFINE AS CONFIGURAÇÕES DO TOPO DA PÁGINA -->
+            <ul class="navbar">
+                <li><a href="index.html" class="nav-link active">HOME</a></li>
+            </ul>
+            <div class="btn-actions"> <!-- LOGIN ILUSTRATIVO -->
+                <i class="bx bx-search" onclick="toggleSearch()"></i>
+                <i class="bx bx-cart" onclick="toggleCart()"></i>
+                <img src="ImagensM/pngegg.png" onclick="toggleMenu()" class="pngegg-ImagensM">
+            </div>
+            </div>
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <img src="ImagensM/pngegg.png">
+                        <h3>Mario</h3>
+                    </div>
+                    <hr>
+                    <a href="#" class="sub-menu-link">
+                        <i class="bx bxs-user"></i>
+                        <p>Minha conta</p>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <i class="bx bxs-cog"></i>
+                        <p>Configurações</p>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <i class="bx bxs-help-circle"></i>
+                        <p>Suporte & Ajuda</p>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <i class="bx bxs-exit"></i>
+                        <p>Sair</p>
+                        <span>></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="novidades" id="novidades">
+        <section id="produtos" class="produtos container"></section>
+        <div class="heading">DESCRIÇÃO DO PRODUTO</div>
+        <div class="pro-container">
+            <div class="pro">
+                <img src="ImagensM/caneca-luigi-super-mario-porcelana-caneca-gamer.jpg" alt="">
+                <div class="des">
+                    <span>NINTENDO</span>
+                    <h5>CANECA DE PORCELANA LUIGI</h5>
+
+                </div>
+                <a href="#"><i class="bx bxs-cart cart"></i></a>
+            </div>
+        </div>
+       
+        <title>Caneca de Porcelana do Luigi</title>
+    </head>
+    <body>
+    
+        <table>
+            <tr>
+                <th>Características</th>
+                <th>Descrição</th>
+            </tr>
+            <tr>
+                <td>Material</td>
+                <td>Porcelana de alta qualidade</td>
+            </tr>
+            <tr>
+                <td>Design</td>
+                <td>Detalhes vibrantes do Luigi, incluindo bigode e boné verde</td>
+            </tr>
+            <tr>
+                <td>Funcionalidade</td>
+                <td>Porcelana fina para manter a temperatura da bebida; alça ergonômica; capacidade generosa</td>
+            </tr>
+            <tr>
+                <td>Estilo</td>
+                <td>Combinação de charme e nostalgia para fãs de videogames</td>
+            </tr>
+        </table>
+    </section>
+
+
+</body>
+</html>
+
